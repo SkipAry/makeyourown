@@ -42,25 +42,40 @@ body:has(.bag-dock:not([hidden])){padding-bottom:80px}.footer{padding-bottom:48p
 }
 @media(max-width:350px){.shell,.mast-inner{width:calc(100% - 32px)}.desktop-nav{font-size:13px;gap:8px}.showcase h1{font-size:54px}.hero-actions a{font-size:12px}.menu{padding-inline:16px}.menu-card{padding:20px}.story-copy{padding-inline:20px}}
 
-/* Lora for reading and interface text; Oswald for display headings. */
-:root{--display:'Oswald','Arial Narrow',sans-serif;--serif:'Lora',Georgia,serif;--sans:'Lora',Georgia,serif}
-h1,h2,.builder-intro h2,.menu-intro h2,.story h2,.section-title,.panel-head h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:-.025em;line-height:1.08}
-.showcase h1{font-family:var(--display);font-weight:400;line-height:1.05;letter-spacing:-.035em;font-size:clamp(64px,6.3vw,88px)}
-.section-title{font-size:28px}.panel-head h2{font-size:32px}.wordmark{font-family:var(--serif)}
-@media(min-width:1600px){.showcase h1{font-size:88px}}
-@media(min-width:681px) and (max-width:1000px){.showcase h1{font-size:64px}}
-@media(max-width:680px){.showcase h1{font-size:clamp(48px,12.4vw,64px);line-height:1.08}.section-title{font-size:26px}.panel-head h2{font-size:30px}}
-@media(max-width:350px){.showcase h1{font-size:43px}}
-
-
-/* Use only Lora and Oswald throughout the app. */
+/* Typography: two families, explicit roles, natural letter spacing. */
 :root{--serif:'Lora',serif;--sans:'Lora',serif;--display:'Oswald',sans-serif}
-body,button,input,select,textarea{font-family:var(--serif)}
-h1,h2,.builder-intro h2,.menu-intro h2,.story h2,.section-title,.panel-head h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:-.025em;line-height:1.08}
-.showcase h1{font-family:var(--display);font-weight:400;font-size:clamp(64px,6.3vw,88px);line-height:1.05;letter-spacing:-.035em}
-.wordmark,.mast-inner .wordmark,.footer .wordmark{font-family:var(--serif)}
-.menu-copy h3,.showcase-label strong{font-family:var(--serif)}
-@media(min-width:1600px){.showcase h1{font-size:88px}}
-@media(min-width:681px) and (max-width:1000px){.showcase h1{font-size:64px}}
-@media(max-width:680px){.showcase h1{font-size:clamp(48px,12.4vw,64px);line-height:1.08}.section-title{font-size:26px}.panel-head h2{font-size:30px}}
-@media(max-width:350px){.showcase h1{font-size:43px}}
+body,button,input,select,textarea{font-family:var(--serif);font-synthesis:none}
+body{font-size:16px;line-height:1.6}
+h1,h2,.builder-intro h2,.menu-intro h2,.story h2,.section-title,.panel-head h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:0;line-height:1.12}
+.showcase h1{font:400 clamp(56px,5.6vw,80px)/1.05 var(--display);letter-spacing:0;text-transform:uppercase;margin-bottom:24px}
+.builder-intro h2,.menu-intro h2{font-size:48px;line-height:1.12;letter-spacing:0}
+.story h2{font-size:48px;line-height:1.12;letter-spacing:0}
+.section-title{font:400 28px/1.2 var(--display);letter-spacing:0;text-transform:uppercase}
+.panel-head h2{font:400 30px/1.2 var(--display);letter-spacing:0;text-transform:uppercase}
+.wordmark,.mast-inner .wordmark,.footer .wordmark{font-family:var(--serif);font-weight:600;letter-spacing:-.06em}
+.showcase-sub,.builder-meta p,.menu-copy p,.story p:not(.eyebrow){font:400 16px/1.65 var(--serif);letter-spacing:0;max-width:45ch}
+.showcase-kicker,.eyebrow{font:500 11px/1.5 var(--serif);letter-spacing:.1em}
+.desktop-nav{font:400 14px/1.4 var(--serif)}
+.showcase-build,.showcase-custom,.primary,.menu-buy button{font:400 14px/1.4 var(--serif);letter-spacing:0}
+.menu-copy h3{font:700 20px/1.3 var(--serif);letter-spacing:0;text-transform:none;text-wrap:pretty}
+.showcase-label strong{font:500 18px/1.4 var(--serif);letter-spacing:0}
+.topping-label #stage-feedback{font:400 13px/1.5 var(--serif);letter-spacing:0;text-transform:none;color:var(--muted);margin:0}
+.menu-diet,.menu-count,.preview-tag,.showcase-label span{font-family:var(--serif);font-weight:400;letter-spacing:0}
+.menu-buy strong,.action-prices strong,.total,.cart-line strong,.bag-dock strong{font-family:var(--serif);letter-spacing:0;font-variant-numeric:lining-nums tabular-nums}
+.menu-buy strong,.action-prices strong{font-size:16px;font-weight:500;line-height:1.4}
+.topping .pick{font:400 13px/1.4 var(--serif)}.topping .pick small{font:400 12px/1.4 var(--serif);font-variant-numeric:lining-nums tabular-nums}
+.order-note,.menu-note{font:400 14px/1.6 var(--serif)}
+@media(min-width:1600px){.showcase h1{font-size:80px}}
+@media(min-width:681px) and (max-width:1000px){.showcase h1{font-size:60px}.builder-intro h2,.menu-intro h2,.story h2{font-size:40px}}
+@media(max-width:680px){
+.showcase h1{font-size:clamp(43px,11.5vw,58px);line-height:1.08;letter-spacing:0}
+.builder-intro h2,.menu-intro h2,.story h2{font-size:38px;line-height:1.15;letter-spacing:0}
+.section-title{font-size:25px;line-height:1.2}.panel-head h2{font-size:28px}
+.menu-copy h3{font-size:20px;line-height:1.3;letter-spacing:0}
+.showcase-sub,.builder-meta p,.menu-copy p,.story p:not(.eyebrow){font-size:16px;line-height:1.6}
+.hero-actions a{font-size:14px;line-height:1.4}.desktop-nav{font-size:14px;line-height:1.4}
+.mast-inner .wordmark{font-size:38px;line-height:1.1;letter-spacing:-.06em}
+.builder-steps{font-size:13px;line-height:1.5}.preview-buttons button,.combos button{font-size:13px;line-height:1.4}
+.menu-toolbar .filters button{font-size:13px;line-height:1.4}
+}
+@media(max-width:350px){.showcase h1{font-size:38px}.desktop-nav{font-size:13px}.hero-actions a{font-size:13px}.builder-intro h2,.menu-intro h2,.story h2{font-size:34px}}
