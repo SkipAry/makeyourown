@@ -1955,3 +1955,8 @@ body:has(dialog[open]) {
     font-size: 15px;
   }
 }
+@media (max-width: 760px) {
+  .studio-invite strong span {
+    display: none;
+  }
+}
