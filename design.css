@@ -1,4 +1,4 @@
-:root{--paper:#f2e2d5;--cream:#fef6ee;--wine:#651c32;--ink:#651c32;--muted:#77515a;--line:#dfcac8;--olive:#651c32;--serif:'Lora',Georgia,serif;--sans:'Lora',Georgia,serif;--coral:#ef6079;--edge:24px}
+:root{--paper:#f2e2d5;--cream:#fef6ee;--wine:#651c32;--ink:#651c32;--muted:#77515a;--line:#dfcac8;--olive:#651c32;--serif:'Oswald',sans-serif;--sans:'Oswald',sans-serif;--coral:#ef6079;--edge:24px}
 body{background:var(--paper);color:var(--wine);font:400 16px/1.5 var(--serif)}
 .announcement{text-align:center;background:var(--coral);color:var(--cream);font-size:12px;letter-spacing:.04em;padding:9px 20px}
 .shell,.mast-inner{width:min(1280px,calc(100% - 96px))}.masthead{background:var(--wine);color:var(--cream);border:0}.mast-inner{height:76px}.wordmark{font:italic 600 46px/.9 var(--serif);letter-spacing:-4px;color:inherit}.desktop-nav{font:400 14px var(--serif);gap:32px}.desktop-nav a:hover{color:#ef6079}.bag{background:transparent;color:var(--cream);border:1px solid #dfcac855;font-weight:400}.bag #cart-count{background:var(--coral);color:var(--cream)}
@@ -42,8 +42,8 @@ body:has(.bag-dock:not([hidden])){padding-bottom:80px}.footer{padding-bottom:48p
 }
 @media(max-width:350px){.shell,.mast-inner{width:calc(100% - 32px)}.desktop-nav{font-size:13px;gap:8px}.showcase h1{font-size:54px}.hero-actions a{font-size:12px}.menu{padding-inline:16px}.menu-card{padding:20px}.story-copy{padding-inline:20px}}
 
-/* Typography: two families, explicit roles, natural letter spacing. */
-:root{--serif:'Lora',serif;--sans:'Lora',serif;--display:'Oswald',sans-serif}
+/* Typography: Oswald throughout, with explicit hierarchy and natural spacing. */
+:root{--serif:'Oswald',sans-serif;--sans:'Oswald',sans-serif;--display:'Oswald',sans-serif}
 body,button,input,select,textarea{font-family:var(--serif);font-synthesis:none}
 body{font-size:16px;line-height:1.6}
 h1,h2,.builder-intro h2,.menu-intro h2,.story h2,.section-title,.panel-head h2{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:0;line-height:1.12}
@@ -79,3 +79,14 @@ h1,h2,.builder-intro h2,.menu-intro h2,.story h2,.section-title,.panel-head h2{f
 .menu-toolbar .filters button{font-size:13px;line-height:1.4}
 }
 @media(max-width:350px){.showcase h1{font-size:38px}.desktop-nav{font-size:13px}.hero-actions a{font-size:13px}.builder-intro h2,.menu-intro h2,.story h2{font-size:34px}}
+
+/* One family across navigation, content, controls, prices and dialogs. */
+:root{--serif:'Oswald',sans-serif;--sans:'Oswald',sans-serif;--display:'Oswald',sans-serif}
+body,button,input,select,textarea{font-family:'Oswald',sans-serif}
+.wordmark,.mast-inner .wordmark,.footer .wordmark{font-family:'Oswald',sans-serif;font-style:normal;font-weight:500;letter-spacing:-.025em}
+.showcase-sub,.builder-meta p,.menu-copy p,.story p:not(.eyebrow){font-size:17px;font-weight:400;line-height:1.6;letter-spacing:.01em}
+.menu-copy h3{font-weight:500;font-size:23px;line-height:1.25}
+.desktop-nav{font-size:16px}.showcase-build,.showcase-custom,.primary,.menu-buy button{font-size:16px;line-height:1.4}
+.topping .pick{font-size:15px}.topping .pick small{font-size:13px}.topping-label #stage-feedback{font-size:15px;line-height:1.5}
+@media(max-width:680px){.desktop-nav{font-size:16px}.hero-actions a{font-size:16px}.menu-copy h3{font-size:23px}.showcase-sub,.builder-meta p,.menu-copy p,.story p:not(.eyebrow){font-size:17px}.preview-buttons button,.combos button,.menu-toolbar .filters button{font-size:15px}.builder-steps{font-size:15px}}
+@media(max-width:350px){.desktop-nav{font-size:15px}.hero-actions a{font-size:15px}}
